@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
@@ -141,6 +142,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <JsonLd data={buildStructuredData()} />
         <AnalyticsProvider />
+        <Analytics />
       </body>
     </html>
   );
